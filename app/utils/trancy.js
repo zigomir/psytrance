@@ -1,16 +1,17 @@
 // source: http://codepen.io/calebjeffrey/pen/IHuhL
 export default function() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById('canvas'),
+      $body = Ember.$('body'),
+      ctx = canvas.getContext('2d'),
+      W = window.innerWidth,
+      H = window.innerHeight,
+      particles = [],
+      mouse = {},
+      particleCount = 500;
 
-  var W = window.innerWidth, H = window.innerHeight;
   canvas.width = W;
   canvas.height = H;
 
-  var particles = [];
-  var mouse = {};
-
-  var particleCount = 500;
   for (var i = 0; i < particleCount; i++) {
     particles.push(new Particle());
   }
@@ -64,6 +65,8 @@ export default function() {
       gradient.addColorStop(0, 'rgba('+p.r+', '+p.g+', '+p.b+', '+p.opacity+')');
       gradient.addColorStop(0.5, 'rgba('+p.r+', '+p.g+', '+p.b+', '+p.opacity+')');
       gradient.addColorStop(1, 'rgba('+p.r+', '+p.g+', '+p.b+', 0)');
+
+      $body.css('background-color', 'rgba('+p.r+', '+p.g+', '+p.b+', '+p.opacity+')');
 
       ctx.fillStyle = gradient;
       ctx.arc(p.location.x, p.location.y, p.radius, Math.PI * 2, false);

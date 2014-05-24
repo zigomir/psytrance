@@ -1,9 +1,10 @@
 body {
-  background-color: black;
+  background-color: red;
   margin: 0;
   padding: 0;
   width: 100%;
   color: #fff;
+  overflow: hidden;
 }
 
 h1 {
@@ -17,17 +18,18 @@ img {
 }
 
 @-webkit-keyframes shake {
-  0%   { -webkit-transform: translate(0, 0); }
-  25%  { -webkit-transform: translate(-25px, 25px); }
-  50%  { -webkit-transform: translate(25px, -25px); }
-  75%  { -webkit-transform: translate(-50px, 50px); }
-  100% { -webkit-transform: translate(0, 0); }
+  0%   { -webkit-transform: translate( 0,      0  ); }
+  25%  { -webkit-transform: translate(-20px,  20px); }
+  50%  { -webkit-transform: translate( 20px, -20px); }
+  75%  { -webkit-transform: translate(-20px,  20px); }
+  100% { -webkit-transform: translate( 0,      0  ); }
 }
 
 canvas {
   -webkit-animation-name: shake;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 3.1);
+  /*last param of cubic-bezier of value 3 is ok, 30 is fuckin crazy*/
+  /*-webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 3);*/
 }
 
 /*This one needs higher priority; because we need it to reset animation*/

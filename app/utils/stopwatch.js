@@ -1,3 +1,4 @@
+// source: http://jsbin.com/tiweq/1/edit
 export default function() {
   var startAt = 0;	// Time of last start / resume. (0 if not running)
   var lapTime = 0;	// Time on the clock when last stopped in milliseconds
