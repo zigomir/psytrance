@@ -2,11 +2,9 @@
 
 Not if digital!
 
-
 # TODO
 
-- first level song: https://soundcloud.com/somatrixx/dj-somatrixx-pres-free-spirit
-- score based on mouse movement
+- score based on time and mouse movement
 - remote controlling effects from other client VIA firebase - real party
 
 
