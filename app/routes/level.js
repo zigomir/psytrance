@@ -6,13 +6,13 @@ export default Ember.Route.extend({
     };
   },
 
-  // TODO: move to new level based on score or on click
-  activate: function() {
-    var self = this;
-    var level = 1;
-    window.setInterval(function() {
-      self.transitionTo('level', level);
-      level += 1;
-    }, 10000);
-  }
+  // // TODO: move to new level based on score or on click
+  // activate: function() {
+  //   var self = this;
+  //   var level = 1;
+  //   window.setInterval(function() {
+  //     self.transitionTo('level', level);
+  //     level += 1;
+  //   }, 10000);
+  // }
 });

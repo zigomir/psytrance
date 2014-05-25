@@ -15,6 +15,13 @@ export default Ember.ObjectController.extend({
       $canvas.css('-webkit-animation-timing-function',
         'cubic-bezier(0.1, 0.7, 1.0, ' + level + ')');
     }
-  }.observes('levelClass')
+  }.observes('levelClass'),
+
+  actions: {
+    levelUp: function() {
+      var newLevel = parseInt(this.get('level'), 10) + 1;
+      this.transitionToRoute('level', newLevel);
+    }
+  }
 
 });
