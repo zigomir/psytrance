@@ -26,10 +26,9 @@ img {
 }
 
 canvas {
+  cursor: none;
   -webkit-animation-name: shake;
   -webkit-animation-iteration-count: infinite;
-  /*last param of cubic-bezier of value 3 is ok, 30 is fuckin crazy*/
-  /*-webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 3);*/
 }
 
 /*This one needs higher priority; because we need it to reset animation*/

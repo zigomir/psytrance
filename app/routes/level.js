@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     };
   },
 
-  // TODO: move to new level based on score, balance this interval somehow
+  // TODO: move to new level based on score or on click
   activate: function() {
     var self = this;
     var level = 1;

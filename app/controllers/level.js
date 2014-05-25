@@ -9,7 +9,7 @@ export default Ember.ObjectController.extend({
       $canvas.width(); // force recalculate style
       $canvas.removeClass('loading');
 
-      $canvas.css('-webkit-animation-duration', 100 + 'ms');
+      $canvas.css('-webkit-animation-duration', (1000 / level) + 'ms');
 
       // level 5+ is getting crazy as hell
       $canvas.css('-webkit-animation-timing-function',
