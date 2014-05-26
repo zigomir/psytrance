@@ -19,5 +19,16 @@
     <script>
       window.Psytrance = require('psytrance/app')['default'].create(ENV.APP);
     </script>
+
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script>
+        SC.initialize({
+            client_id: '3d71b24d832a946867f4715b6ac7f5df'
+        });
+
+        SC.stream('/tracks/151161393', function(sound){
+            sound.play();
+        });
+    </script>
   </body>
 </html>
