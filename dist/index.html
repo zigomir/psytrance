@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psytrance</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/" />
+
+    <link rel="stylesheet" href="assets/psytrance.css">
+  </head>
+  <body>
+    <script>
+      window.ENV = {"baseURL":"/","locationType":"auto","FEATURES":{},"APP":{}};
+    </script>
+    <script src="assets/psytrance.js"></script>
+    <script>
+      window.Psytrance = require('psytrance/app')['default'].create(ENV.APP);
+    </script>
+
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script>
+        SC.initialize({
+            client_id: '3d71b24d832a946867f4715b6ac7f5df'
+        });
+
+        SC.stream('/tracks/151161393', function(sound){
+            sound.play();
+        });
+    </script>
+  </body>
+</html>
